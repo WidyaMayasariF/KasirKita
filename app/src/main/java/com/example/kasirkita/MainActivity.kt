@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.kasirkita.daftar_barang.DaftarBarangActivity
 import com.example.kasirkita.databinding.ActivityMainBinding
+import com.example.kasirkita.kasir.KasirActivity
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -21,7 +22,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.kasir.setOnClickListener {
-            // TODO : implement navigation ke halaman kasir
+            Intent(applicationContext, KasirActivity::class.java).also {
+                startActivity(it)
+            }
         }
     }
 }
